@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from pages.base_page import *
+from pages.base_page import Base_page
 
 
 class Abtest_page(Base_page):
@@ -11,12 +11,17 @@ class Abtest_page(Base_page):
     def navigate_to_abtest_page(self):
         self.wait_for(*self._ABTEST_MENU).click()
 
-    def check_title(self):
+    def get_title_text(self):
         return self.wait_for(*self._ABTEST_TITLE).text
 
-    def check_text(self):
+    def get_title(self):
+        return self.wait_for(*self._ABTEST_TITLE)
+
+    def get_content_text(self):
         return self.wait_for(*self._ABTEST_TEXT).text
 
-    def check_page(self):
-        return self.check_page_base("/abtest")
+    def get_content(self):
+        return self.wait_for(*self._ABTEST_TEXT)
 
+    def at_page(self) -> bool:
+        return self.at_page_base("/abtest")
