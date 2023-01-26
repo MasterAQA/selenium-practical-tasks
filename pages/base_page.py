@@ -1,12 +1,12 @@
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
-
+from config import URL
 
 class Base_page:
     def __init__(self, driver):
         self._driver = driver
-        self.default_url = "https://the-internet.herokuapp.com"
+        self.default_url = URL
         self.get_url()
 
     def get_url(self) -> None:
