@@ -3,13 +3,13 @@ ABTEST_PART_OF_TEXT = "learn different versions"
 
 
 def test_abtest_page(abtest_page) -> None:
-    abtest_page.navigate_to_abtest_page()
+    abtest_page.navigate_to_page()
 
     assert abtest_page.at_page()
 
 
 def test_abtest_page_title(abtest_page) -> None:
-    abtest_page.navigate_to_abtest_page()
+    abtest_page.navigate_to_page()
 
     assert abtest_page.at_page()
     assert abtest_page.get_title().is_displayed()
@@ -17,7 +17,7 @@ def test_abtest_page_title(abtest_page) -> None:
 
 
 def test_abtest_page_text(abtest_page) -> None:
-    abtest_page.navigate_to_abtest_page()
+    abtest_page.navigate_to_page()
 
     assert abtest_page.at_page()
     assert abtest_page.get_content().is_displayed()
