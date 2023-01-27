@@ -8,8 +8,9 @@ class AddRemoveElementsPage(BasePage):
     _ADD_REMOVE_TITLE = (By.TAG_NAME, "h3")
     _ADD_ELEMENT = (By.XPATH, "//div[@class='example']/button")
     _REMOVE_ELEMENT = (By.XPATH, "//button[@class='added-manually'][1]")
+    _COUNT_ELEMENTS = (By.XPATH, "//button[@class='added-manually']")
 
-    def navigate_to_add_remove_elements_page(self):
+    def navigate_to_page(self):
         self.wait_for(*self._ADD_REMOVE_ELEMENTS).click()
 
     def get_title_text(self):
@@ -20,6 +21,9 @@ class AddRemoveElementsPage(BasePage):
 
     def remove_element(self):
         self.wait_for(*self._REMOVE_ELEMENT).click()
+
+    def check_elements_count(self) -> int:
+        return len(self.find_elements(*self._COUNT_ELEMENTS))
 
     def at_page(self):
         return self.at_page_base("/add_remove_elements/")

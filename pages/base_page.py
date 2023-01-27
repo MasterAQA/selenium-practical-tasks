@@ -7,15 +7,21 @@ class BasePage:
     def __init__(self, driver):
         self._driver = driver
         self.default_url = URL
-        self.get_url()
+        self.get_url(self.default_url)
 
-    def get_url(self) -> None:
-        self._driver.get(self.default_url)
+    def get_url(self, url: str) -> None:
+        self._driver.get(url)
 
     def wait_for(self, *locator: str) -> WebDriver:
         return WebDriverWait(self._driver, 10).until(
             ec.presence_of_element_located(locator)
         )
 
+    def find_elements(self, *locator: str):
+        return self.wait_for(*locator).find_elements(*locator)
+
     def at_page_base(self, link_end: str) -> bool:
         return (self._driver.current_url) == f"{self.default_url+link_end}"
+
+    def at_page_base_admin(self, link_end: str) -> bool:
+        return (self._driver.current_url) == (self.default_url.replace("https://", f"https://admin:admin@")+link_end)
