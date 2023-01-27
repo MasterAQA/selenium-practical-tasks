@@ -1,18 +1,24 @@
-from pages.abtest_page import Abtest_page
+from pages.abtest_page import AbtestPage
 
 ABTEST_TITLE_TEXT = "A/B Test"
 ABTEST_PART_OF_TEXT = "learn different versions"
 
 
 def test_abtest_page(driver) -> None:
-    page = Abtest_page(driver)
+    page = AbtestPage(driver)
     page.navigate_to_abtest_page()
 
     assert page.at_page()
 
 
+def test_abtest_page1(abtest_page) -> None:
+    abtest_page.navigate_to_abtest_page()
+
+    assert abtest_page.at_page()
+
+
 def test_abtest_page_title(driver) -> None:
-    page = Abtest_page(driver)
+    page = AbtestPage(driver)
     page.navigate_to_abtest_page()
 
     assert page.at_page()
@@ -21,7 +27,7 @@ def test_abtest_page_title(driver) -> None:
 
 
 def test_abtest_page_text(driver) -> None:
-    page = Abtest_page(driver)
+    page = AbtestPage(driver)
     page.navigate_to_abtest_page()
 
     assert page.at_page()
