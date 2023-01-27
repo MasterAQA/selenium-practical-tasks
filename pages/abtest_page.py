@@ -1,9 +1,9 @@
+from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 
 
 class AbtestPage(BasePage):
-
     def __init__(self, driver):
         super().__init__(driver)
 
@@ -17,13 +17,13 @@ class AbtestPage(BasePage):
     def get_title(self):
         return self.wait_for(*self._ABTEST_TITLE)
 
-    def get_title_text(self):
+    def get_title_text(self) -> str:
         return self.wait_for(*self._ABTEST_TITLE).text
 
     def get_content(self):
         return self.wait_for(*self._ABTEST_TEXT)
 
-    def get_content_text(self):
+    def get_content_text(self) -> str:
         return self.wait_for(*self._ABTEST_TEXT).text
 
     def at_page(self) -> bool:

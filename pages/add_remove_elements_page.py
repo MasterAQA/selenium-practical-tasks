@@ -3,6 +3,8 @@ from pages.base_page import BasePage
 
 
 class AddRemoveElementsPage(BasePage):
+    def __init__(self, driver):
+        super().__init__(driver)
 
     _ADD_REMOVE_ELEMENTS = (By.LINK_TEXT, "Add/Remove Elements")
     _ADD_REMOVE_TITLE = (By.TAG_NAME, "h3")
@@ -13,7 +15,7 @@ class AddRemoveElementsPage(BasePage):
     def navigate_to_page(self):
         self.wait_for(*self._ADD_REMOVE_ELEMENTS).click()
 
-    def get_title_text(self):
+    def get_title_text(self) -> str:
         return self.wait_for(*self._ADD_REMOVE_TITLE).text
 
     def add_element(self):
@@ -25,5 +27,5 @@ class AddRemoveElementsPage(BasePage):
     def check_elements_count(self) -> int:
         return len(self.find_elements(*self._COUNT_ELEMENTS))
 
-    def at_page(self):
+    def at_page(self) -> bool:
         return self.at_page_base("/add_remove_elements/")
