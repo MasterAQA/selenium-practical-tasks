@@ -1,10 +1,10 @@
-from pages.add_remove_elements_page import Add_remove_elements_page
+from pages.add_remove_elements_page import AddRemoveElementsPage
 
 ADD_REMOVE_ELEMENTS_TITLE = "Add/Remove Elements"
 
 
 def test_add_remove_elements_page_should_work():
-    page = Add_remove_elements_page()
+    page = AddRemoveElementsPage()
     page.navigate_to_add_remove_elements_page()
 
     page.add_element()

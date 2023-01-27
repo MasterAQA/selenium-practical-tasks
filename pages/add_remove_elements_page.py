@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
-from pages.base_page import Base_page
+from pages.base_page import BasePage
 
 
-class Add_remove_elements_page(Base_page):
+class AddRemoveElementsPage(BasePage):
 
     _ADD_REMOVE_ELEMENTS = (By.LINK_TEXT, "Add/Remove Elements")
     _ADD_REMOVE_TITLE = (By.TAG_NAME, "h3")

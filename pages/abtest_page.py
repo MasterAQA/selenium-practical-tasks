@@ -1,8 +1,11 @@
 from selenium.webdriver.common.by import By
-from pages.base_page import Base_page
+from pages.base_page import BasePage
 
 
-class Abtest_page(Base_page):
+class AbtestPage(BasePage):
+
+    def __init__(self, driver):
+        super().__init__(driver)
 
     _ABTEST_MENU = (By.LINK_TEXT, "A/B Testing")
     _ABTEST_TITLE = (By.TAG_NAME, "h3")
