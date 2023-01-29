@@ -9,7 +9,6 @@ class ContextMenu(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self.driver = driver
-        self.actionChains = ActionChains(driver)
 
     _CONTEXT_MENU = (By.LINK_TEXT, "Context Menu")
     _CONTEXT_MENU_TITLE = (By.TAG_NAME, "h3")
