@@ -11,6 +11,10 @@ from pages.drag_and_drop_page import DragAndDrop
 from pages.dropdown_page import DropdownPage
 from pages.dynamic_controls_page import DynamicControlsPage
 from pages.horizontal_slider_page import HorizontalSliderPage
+from pages.hovers_page import HoversPage
+from pages.inputs_page import InputsPage
+from pages.multiple_windows_page import MultipleWindowsPage
+from pages.data_table_page import DataTablePage
 
 
 @pytest.fixture()
@@ -18,7 +22,12 @@ def driver():
     driver = webdriver.Firefox()
 
     yield driver
-    driver.close()
+    handles = driver.window_handles
+    size = len(handles)
+    for x in range(size):
+        driver.switch_to.window(handles[x])
+        driver.close()
+    # driver.close()
 
 
 @pytest.fixture()
@@ -65,6 +74,27 @@ def dropdown_page(driver) -> DropdownPage:
 def dynamic_controls_page(driver) -> DynamicControlsPage:
     return DynamicControlsPage(driver=driver)
 
+
 @pytest.fixture()
 def horizontal_slider_page(driver) -> HorizontalSliderPage:
     return HorizontalSliderPage(driver=driver)
+
+
+@pytest.fixture()
+def hovers_page(driver) -> HoversPage:
+    return HoversPage(driver=driver)
+
+
+@pytest.fixture()
+def inputs_page(driver) -> InputsPage:
+    return InputsPage(driver=driver)
+
+
+@pytest.fixture()
+def multiple_windows_page(driver) -> MultipleWindowsPage:
+    return MultipleWindowsPage(driver=driver)
+
+
+@pytest.fixture()
+def data_table_page(driver) -> DataTablePage:
+    return DataTablePage(driver=driver)
