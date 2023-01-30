@@ -27,7 +27,6 @@ def driver():
     for x in range(size):
         driver.switch_to.window(handles[x])
         driver.close()
-    # driver.close()
 
 
 @pytest.fixture()
