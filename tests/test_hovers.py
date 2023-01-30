@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 HOVERS_TITLE_TEXT = "Hovers"
 
 HOVER_CONTENT_1 = "name: user1"

@@ -1,5 +1,3 @@
-from pages.add_remove_elements_page import AddRemoveElementsPage
-
 ADD_REMOVE_ELEMENTS_TITLE = "Add/Remove Elements"
 
 

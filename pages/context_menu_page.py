@@ -1,8 +1,5 @@
-from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
-from selenium.webdriver.remote.webdriver import WebDriver
-import requests
 
 
 class ContextMenu(BasePage):

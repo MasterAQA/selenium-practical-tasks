@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 MULTIPLE_WINDOWS_TITLE_TEXT = "Opening a new window"
 NEW_WINDOW_TEXT = "New Window"
 SIZE_HANDLES_2 = 2

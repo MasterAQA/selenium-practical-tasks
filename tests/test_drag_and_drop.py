@@ -1,5 +1,3 @@
-import time
-
 import pytest
 
 DRAG_AND_DROP_TITLE_TEXT = "Drag and Drop"

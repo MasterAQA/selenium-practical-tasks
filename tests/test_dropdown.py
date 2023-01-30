@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 DROPDOWN_TITLE_TEXT = "Dropdown List"
 DROPDOWN_INDEX_1 = "Option 1"
 DROPDOWN_INDEX_2 = "Option 2"

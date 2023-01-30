@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 BROKEN_IMAGES_TITLE_TEXT = "Broken Images"
 PASS_BASIC_AUTH_PART_OF_TEXT = "Congratulations!"
 

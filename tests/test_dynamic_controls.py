@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 DYNAMIC_CONTROL_TITLE_TEXT = "Dynamic Controls"
 
 AFTER_REMOVE_BUTTON = "It's gone!"

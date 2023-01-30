@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 CONTEXT_MENU_TITLE_TEXT = "Context Menu"
 ALERT_TEXT = "You selected a context menu"
 

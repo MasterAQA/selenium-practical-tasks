@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 CHECKBOX_TITLE_TEXT = "Checkboxes"
 
 

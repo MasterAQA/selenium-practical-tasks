@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 HORIZONTAL_SLIDER_TITLE_TEXT = "Horizontal Slider"
 
 

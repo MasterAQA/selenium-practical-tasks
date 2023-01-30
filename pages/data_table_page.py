@@ -1,9 +1,4 @@
-import time
-
-from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.webdriver.support.select import Select
 
 from pages.base_page import BasePage
 

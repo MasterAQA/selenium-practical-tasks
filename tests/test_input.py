@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 INPUTS_TITLE_TEXT = "Inputs"
 
 INPUT_VALUE_1 = 112

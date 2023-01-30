@@ -1,7 +1,3 @@
-import time
-
-import pytest
-
 BASIC_AUTH_TITLE_TEXT = "Basic Auth"
 PASS_BASIC_AUTH_PART_OF_TEXT = "Congratulations!"
 

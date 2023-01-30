@@ -1,7 +1,5 @@
 import time
 
-import pytest
-
 DATA_TABLE_TITLE_TEXT = "Data Tables"
 FBACH_TEXT = "fbach@yahoo.com"
 COLUMN_LIST_NAMES = ["John", "Frank", "Jason", "Tim"]
