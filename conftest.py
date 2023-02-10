@@ -22,11 +22,7 @@ def driver():
     driver = webdriver.Firefox()
 
     yield driver
-    handles = driver.window_handles
-    size = len(handles)
-    for x in range(size):
-        driver.switch_to.window(handles[x])
-        driver.close()
+    driver.quit()
 
 
 @pytest.fixture()
